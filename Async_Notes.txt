@@ -1,0 +1,38 @@
+Javascript:
+          * Sychronous
+          * single threaded
+
+Execution Context:
+          * execute one line of code at a time.
+          * each operation waits for the last one to complete before executing
+
+- Global Execution context (GLOBAL) - created when the script is loaded. It contains 
+variables declared outside functions and global scope objects like `window` in browser environment.
+Call Stack:
+- A stack data structure that stores execution contexts. Each function invocation creates a new execution context
+- A stack data structure that stores execution contexts pushed by function calls. Each time a function is
+called, its execution context is added to this call stack until it's cleared out after executing all
+code within the current function.
+
+
+Blocking Code (Sync) Vs Non Blocking Code (Async)
+In JavaScript, there are two types of code: synchronous or asynchronous. The difference lies in how
+they handle control flow during their execution.
+
+Synchronous Code:
+- This type of code executes one statement at a time. Control flows from one statement to another
+one after the other in a linear fashion.
+- Block the flow of program
+Example:
+javascript
+
+Aynchronous Code:
+- This type of code doesn’t block the flow of program but instead continues executing other tasks
+in the meantime.
+- Don’t block the flow of program
+Example:
+setTimeout(function(){console.log('Hello World');}, 3000); //
+// setTimeout() is an example of async code because it does not stop the rest
+// of the code from executing immediately. Instead, it schedules a function to be called later on
+// once the specified delay has passed. In this case, "Hello World" will be printed to
+// the console approximately 3 seconds after the script began running.
