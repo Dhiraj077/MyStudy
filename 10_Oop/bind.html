@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document>
+</head>
+<body>
+   <button>Button Clicked</button> <!-- This button element is used to trigger the 'click' event -->
+</body>
+<script>
+   // Define a new class 'Doc' with its constructor
+   class Doc {
+       constructor() {
+           // Initialize properties 'library' and 'server'
+           this.library =  'JavaScript' // This property holds the name of the programming language
+           this.server = 'https://localhost:3000/api' // This property holds the server URL for API requests
+
+           // Attach a click event listener to the button element
+           document.querySelector('button').addEventListener('click', this.handleClick.bind(this)) // Bind the handleClick method to the class instance using .bind()
+       }
+
+       // Define a method 'handleClick' to handle the click event
+       handleClick() {
+           console.log('button clicked') // Log a message to the console when the button is clicked
+           console.log(this.server) // Log the server URL to the console when the button is clicked
+       }
+   }
+
+   // Create a new instance of the 'Doc' class and assign it to the 'app' variable
+   const app = new Doc()
+</script>
+</html>
